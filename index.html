@@ -4,84 +4,83 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<!-- icons generated via https://iconifier.net/ -->
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
-		<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
-		<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
-		<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png" />
-		<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
-		<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
-		<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
-		<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon-180x180.png" />
+        <!-- icons generated via https://iconifier.net/ -->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon-180x180.png" />
         <link rel="stylesheet" href="/css/styles.css">
-		<title>Redőny</title>
+        <title>Redőny</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function() {
-				$('.btn').click(function(){
-					const data = this.name.split('-');
-					var btn = this;
-					btn.disabled = true;
-					$.ajax({
-							url: 'api/shutter',
-							data: 	{	"device": data[0],
-										"cmd": data[1]
-									},
-							type: 'post',
-							complete: function() {
-								btn.disabled = false;
-							}
-					});
-				});
-			});
+                $('.btn').click(function() {
+                    const data = this.name.split('-');
+                    var btn = this;
+                    btn.disabled = true;
+                    $.ajax({
+                        url: 'api/shutter',
+                        data: { "device": data[0],
+                                "cmd": data[1] },
+                        type: 'post',
+                        complete: function() {
+                            btn.disabled = false;
+                        }
+                    });
+                });
+            });
         </script>
     </head>
     <body>
          <div class="content">
-			<article class="device-group">
-				<article class="device-button-container triple-group">
-					<div class="button-header">Ház</div>
-					<input type="button" class="btn up" name="house-up">
-					<input type="button" class="btn stop" name="house-stop">
-					<input type="button" class="btn down" name="house-down">
-				</article>
-			</article>
-			<article class="device-group">
-				<article class="device-button-container double-group">
-					<div class="button-header">Konyha</div>
-					<input type="button" class="btn up" name="kitchen-up">
-					<input type="button" class="btn stop" name="kitchen-stop">
-					<input type="button" class="btn down" name="kitchen-down">
-				</article>
-				<article class="device-button-container double-group">
-					<div class="button-header">Nappali</div>
-					<input type="button" class="btn up" name="lroom-up">
-					<input type="button" class="btn stop" name="lroom-stop">
-					<input type="button" class="btn down" name="lroom-down">
-				</article>
-			</article>
-			<article class="device-group">
-				<article class="device-button-container single-group">
-					<div class="button-header">N. bal</div>
-					<input type="button" class="btn up" name="lroom_l-up">
-					<input type="button" class="btn stop" name="lroom_l-stop">
-					<input type="button" class="btn down" name="lroom_l-down">
-				</article>
-				<article class="device-button-container single-group">
-					<div class="button-header">N. közép</div>
-					<input type="button" class="btn up" name="lroom_m-up">
-					<input type="button" class="btn stop" name="lroom_m-stop">
-					<input type="button" class="btn down" name="lroom_m-down">
-				</article>
-				<article class="device-button-container single-group">
-					<div class="button-header">N. jobb</div>
-					<input type="button" class="btn up" name="lroom_r-up">
-					<input type="button" class="btn stop" name="lroom_r-stop">
-					<input type="button" class="btn down" name="lroom_r-down">
-				</article>
-			</article>
-		 </div>
+            <article class="device-group">
+                <article class="device-button-container triple-group">
+                    <div class="button-header">Ház</div>
+                    <input type="button" class="btn up" name="house-up">
+                    <input type="button" class="btn stop" name="house-stop">
+                    <input type="button" class="btn down" name="house-down">
+                </article>
+            </article>
+            <article class="device-group">
+                <article class="device-button-container double-group">
+                    <div class="button-header">Konyha</div>
+                    <input type="button" class="btn up" name="kitchen-up">
+                    <input type="button" class="btn stop" name="kitchen-stop">
+                    <input type="button" class="btn down" name="kitchen-down">
+                </article>
+                <article class="device-button-container double-group">
+                    <div class="button-header">Nappali</div>
+                    <input type="button" class="btn up" name="lroom-up">
+                    <input type="button" class="btn stop" name="lroom-stop">
+                    <input type="button" class="btn down" name="lroom-down">
+                </article>
+            </article>
+            <article class="device-group">
+                <article class="device-button-container single-group">
+                    <div class="button-header">N. bal</div>
+                    <input type="button" class="btn up" name="lroom_l-up">
+                    <input type="button" class="btn stop" name="lroom_l-stop">
+                    <input type="button" class="btn down" name="lroom_l-down">
+                </article>
+                <article class="device-button-container single-group">
+                    <div class="button-header">N. közép</div>
+                    <input type="button" class="btn up" name="lroom_m-up">
+                    <input type="button" class="btn stop" name="lroom_m-stop">
+                    <input type="button" class="btn down" name="lroom_m-down">
+                </article>
+                <article class="device-button-container single-group">
+                    <div class="button-header">N. jobb</div>
+                    <input type="button" class="btn up" name="lroom_r-up">
+                    <input type="button" class="btn stop" name="lroom_r-stop">
+                    <input type="button" class="btn down" name="lroom_r-down">
+                </article>
+            </article>
+         </div>
     </body>
 </html>

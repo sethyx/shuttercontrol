@@ -6,7 +6,7 @@ from RPi import GPIO
 
 _LOGGER = logging.getLogger(__name__)
 
-Protocol = namedtuple('Protocol',
+RFProtocol = namedtuple('RFProtocol',
                       ['pulselength', 'repeat_delay',
                        'sync_count', 'sync_delay',
                        'sync_high', 'sync_low',
@@ -14,8 +14,8 @@ Protocol = namedtuple('Protocol',
                        'one_high', 'one_low'])
 
 PROTOCOLS = (None,
-             Protocol(40, 9600, 1, 0, 4750, 1550, 8, 19, 17, 10), # "home smart" shutter
-             Protocol(40, 15200, 12, 3500, 360, 400, 9, 20, 18, 10) # garage door, doesn't work due to rolling code
+             RFProtocol(40, 9600, 1, 0, 4750, 1550, 8, 19, 17, 10), # "home smart" shutter
+             RFProtocol(40, 15200, 12, 3500, 360, 400, 9, 20, 18, 10) # garage door, doesn't work due to rolling code
              )
 
 DEVICE_CODES = {

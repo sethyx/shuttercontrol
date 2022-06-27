@@ -94,13 +94,13 @@ body, html {
 }
   
 .btn:active {
-	  background-color: #abc0d7;
+	  background-color: #69a0dc;
 	  outline: none;
 	  box-shadow: none;
 }
   
 .btn:disabled {
-	  background-color: #abc0d7;
+	  background-color: #69a0dc;
 }
 
 .up {
